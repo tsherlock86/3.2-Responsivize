@@ -1,5 +1,6 @@
+/*
 * {
-  box-sizing: border-box;
+box-sizing: border-box;*/
 }
 *:before,
 *:after {
@@ -16,13 +17,14 @@ body {
 .post {
 }
 .post__header {
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   width: 50%;
   background-color: #0099FF;
   color: #FFF;
-  background-image: url(http://lorempixel.com/600/1200);
+  background-image: url(images/images1.jpg);
+  background-size: cover;
 }
 .post__headerNav {
   list-style: none;
@@ -43,12 +45,22 @@ body {
   text-decoration: none;
 }
 .post__content {
-  width: 50%;
+  /*width: 50%;*/
   margin-left: 50%;
   min-height: 200px;
   padding: 40px;
-  line-height: 27px;
+  padding-top: 0;
+  line-height: 35px;
   color: #6D6D6D;
+}
+
+img {
+  height: inherit;
+  width: 100%;
+
+}
+#top_bar {
+  margin-top: 0;
 }
 
 #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
@@ -66,4 +78,38 @@ body {
 }
 #nav-toggle span:after {
   bottom: -10px;
+}
+@media (max-width: 600px) {
+  .post__header {
+    position: inherit;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0099FF;
+    color: #FFF;
+    height: 450px;
+    background-size: cover;
+  }
+  .post__content {
+    text-align: center;
+    margin: 0px;
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    line-height: 27px;
+  }
+
+  .background-image {
+    height: auto;
+    width: auto;
+
+  }
+  h1, li, a {
+    text-align: center;
+
+  }
+  .post__headerNav {
+    text-align: center;
+  }
 }
